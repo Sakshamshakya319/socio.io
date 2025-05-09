@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white flex flex-col">
+    {{> header}}
+    
+    <main class="pt-16 flex-grow">
+        {{{body}}}
+    </main>
+    
+    {{> footer}}
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
