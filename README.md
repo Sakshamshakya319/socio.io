@@ -24,9 +24,6 @@ A Chrome extension that filters and moderates inappropriate content on the web.
 
 *Step:2*
 # Socio.io Content Moderation Extension
-
-## Installation
-
 1. Download and extract the extension files
 2. Install the native messaging host:
    - Windows: Run `extension/native_host/install_host_win.bat` as administrator
