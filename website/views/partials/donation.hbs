@@ -1,0 +1,61 @@
+<!-- Donation Modal -->
+<div id="donation-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-gray-800 rounded-xl p-8 max-w-md w-full">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold flex items-center">
+                <i data-lucide="heart" class="h-6 w-6 text-red-500 mr-2"></i>
+                Support Socio.io
+            </h2>
+            <button id="close-donation" class="text-gray-400 hover:text-white">
+                ✕
+            </button>
+        </div>
+
+        <p class="text-gray-300 mb-6">
+            Your donation helps us maintain and improve Socio.io. Thank you for your support!
+        </p>
+
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">Select donation amount</h3>
+            <div class="grid grid-cols-3 gap-3 mb-4">
+                <button class="py-3 rounded-lg font-medium transition-colors bg-gray-700 text-gray-200 hover:bg-gray-600 donation-amount" data-amount="45">
+                    ₹45
+                </button>
+                <button class="py-3 rounded-lg font-medium transition-colors bg-gray-700 text-gray-200 hover:bg-gray-600 donation-amount" data-amount="300">
+                    ₹300
+                </button>
+                <button class="py-3 rounded-lg font-medium transition-colors bg-gray-700 text-gray-200 hover:bg-gray-600 donation-amount" data-amount="600">
+                    ₹600
+                </button>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-300 mb-2">
+                    Or enter custom amount (INR)
+                </label>
+                <input
+                    type="text"
+                    id="custom-amount"
+                    class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter amount"
+                />
+            </div>
+        </div>
+
+        <div id="payment-status" class="mb-4 p-3 rounded-lg hidden"></div>
+
+        <button
+            id="donate-button"
+            class="w-full py-3 rounded-lg font-medium bg-blue-600 hover:bg-blue-700 text-white"
+        >
+            Donate Now
+        </button>
+        
+        <div id="fallback-payment" class="mt-4 text-center hidden">
+            <p class="text-sm text-gray-400 mb-2">Having trouble with the payment gateway?</p>
+            <a href="https://upi-link.web.app/upi/socioio@ybl" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">
+                Use direct UPI payment instead
+            </a>
+        </div>
+    </div>
+</div>

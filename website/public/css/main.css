@@ -1,0 +1,52 @@
+/* Custom animations and styles */
+
+/* Shield icon animation */
+.shield-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Stats items animation */
+.stats-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Donation amount button active state */
+.donation-amount.active {
+    background-color: #2563eb !important;
+    color: white !important;
+}
+
+/* General transitions */
+a, button {
+    transition: all 0.2s ease;
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.show {
+    max-height: 300px;
+    opacity: 1;
+}
