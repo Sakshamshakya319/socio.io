@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socio.io Content Moderation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Socio.io</h1>
+            <p>Web Content Moderation System</p>
+        </header>
+        
+        <main>
+            <section class="dashboard">
+                <h2>Dashboard</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Text Analysis</h3>
+                        <p class="stat-number">{{ text_filtered }}</p>
+                        <p>Items filtered</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Image Analysis</h3>
+                        <p class="stat-number">{{ images_filtered }}</p>
+                        <p>Images filtered</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="api-info">
+                <h2>API Status</h2>
+                <p>Status: <span class="status-badge {{ 'active' if api_active else 'inactive' }}">
+                    {{ 'Active' if api_active else 'Inactive' }}
+                </span></p>
+                <p>Endpoint: <code>{{ api_url }}</code></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Socio.io - Web Content Moderation System</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

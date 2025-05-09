@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+ <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socio.io Content Moderation</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Socio.io</h1>
+        <p>Web Content Moderation System</p>
+
+        <div class="toggle-container">
+            <span>Protection:</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleProtection" checked>
+                <span class="slider round"></span>
+            </label>
+            <span id="statusText">ON</span>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Text Filtered:</span>
+                <span class="stat-value" id="textFiltered">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Images Filtered:</span>
+                <span class="stat-value" id="imagesFiltered">0</span>
+                <button id="refreshStatsBtn" class="small-button" title="Refresh Stats">↻</button>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <button id="historyBtn">View History</button>
+            <button id="recoverBtn">Recover Content</button>
+        </div>
+
+        <div id="historyContainer" class="hidden">
+            <h3>Filtering History</h3>
+            <div class="history-list" id="historyList">
+                <!-- History items will be added here -->
+                <div class="loading">Loading history...</div>
+            </div>
+        </div>
+
+        <div id="recoveryContainer" class="hidden">
+            <h3>Recover Filtered Content</h3>
+            <div id="encryptionFiles">
+                <!-- Dropdown will be populated here -->
+            </div>
+            <div class="recovery-result hidden" id="recoveryResult">
+                <h4>Recovered Content</h4>
+                <div id="recoveredText" class="recovered-text-content"></div>
+            </div>
+            <button id="startRecoveryBtn" class="hidden">Apply to Page</button>
+            <button id="copyRecoveryBtn" class="hidden">Copy to Clipboard</button>
+        </div>
+
+        <!-- Add this button somewhere in your popup.html -->
+    <div class="action-buttons">
+        <button id="resetStatsBtn" class="button">Reset Stats</button>
+    </div>
+
+        <div class="footer">
+            <p>© 2025 Socio.io | <a href="#" id="privacyLink">Privacy</a></p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+
+    
+</body>
+
+</html>

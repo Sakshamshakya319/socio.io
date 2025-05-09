@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Socio.io Image Filtration Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #4285f4;
+        }
+        
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .test-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .test-image-container {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .test-image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+        }
+        
+        .image-caption {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Socio.io Image Filtration Test</h1>
+    <p>This page contains various test images to verify that the image filtration is working correctly.</p>
+    
+    <div class="test-section">
+        <h2>Regular Images</h2>
+        <div class="test-images">
+            <div class="test-image-container">
+                <img src="https://picsum.photos/200/300" alt="Random Image 1">
+                <div class="image-caption">Random image from Lorem Picsum</div>
+            </div>
+            
+            <div class="test-image-container">
+                <img src="https://picsum.photos/200/200" alt="Random Image 2">
+                <div class="image-caption">Square random image</div>
+            </div>
+            
+            <div class="test-image-container">
+                <img src="https://picsum.photos/300/150" alt="Random Image 3">
+                <div class="image-caption">Wide random image</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Different Sizes</h2>
+        <div class="test-images">
+            <div class="test-image-container">
+                <img src="https://picsum.photos/50/50" alt="Small Image">
+                <div class="image-caption">Small image (50x50)</div>
+            </div>
+            
+            <div class="test-image-container">
+                <img src="https://picsum.photos/400/200" alt="Large Image">
+                <div class="image-caption">Large image (400x200)</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Different Formats</h2>
+        <div class="test-images">
+            <div class="test-image-container">
+                <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif" alt="GIF Image">
+                <div class="image-caption">GIF image</div>
+            </div>
+            
+            <div class="test-image-container">
+                <img src="https://picsum.photos/id/237/200/300" alt="JPG Image">
+                <div class="image-caption">JPG image</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Images with Sensitive Keywords</h2>
+        <div class="test-images">
+            <div class="test-image-container">
+                <img src="https://picsum.photos/200/300?adult" alt="Image with adult keyword">
+                <div class="image-caption">Image with "adult" in URL</div>
+            </div>
+            
+            <div class="test-image-container">
+                <img src="https://picsum.photos/200/300?violence" alt="Image with violence keyword">
+                <div class="image-caption">Image with "violence" in URL</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // This script will log when images are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    console.log(`Image loaded: ${img.src}`);
+                });
+                
+                img.addEventListener('error', function() {
+                    console.log(`Image failed to load: ${img.src}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
