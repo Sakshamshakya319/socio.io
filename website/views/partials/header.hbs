@@ -1,0 +1,53 @@
+<nav class="bg-gray-900/50 backdrop-blur-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <i data-lucide="shield" class="h-8 w-8 text-blue-500"></i>
+                    <span class="text-xl font-bold">Socio.io</span>
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="flex items-center space-x-8">
+                    <a href="/" class="hover:text-blue-400 transition-colors">Home</a>
+                    <a href="/team" class="hover:text-blue-400 transition-colors">Team</a>
+                    <a href="/contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                    <a href="/download" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button
+                    id="mobile-menu-button"
+                    class="p-2 rounded-md hover:bg-gray-700 transition-colors"
+                >
+                    <i data-lucide="menu" id="menu-icon" class="h-6 w-6"></i>
+                    <i data-lucide="x" id="close-icon" class="h-6 w-6 hidden"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="block px-3 py-2 hover:bg-gray-700 rounded-md">
+                Home
+            </a>
+            <a href="/team" class="block px-3 py-2 hover:bg-gray-700 rounded-md">
+                Team
+            </a>
+            <a href="/contact" class="block px-3 py-2 hover:bg-gray-700 rounded-md">
+                Contact
+            </a>
+            <a href="/download" class="block px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded-md">
+                Download
+            </a>
+        </div>
+    </div>
+</nav>

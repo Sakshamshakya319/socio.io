@@ -1,0 +1,87 @@
+<div class="min-h-screen py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <div class="shield-icon">
+                <i data-lucide="shield" class="h-24 w-24 text-blue-500 mx-auto mb-8"></i>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">Download Socio.io</h1>
+            <p class="text-xl text-gray-400 mb-8">
+                Get started with VeriScan's intelligent content screening system
+            </p>
+            
+            <button
+                id="download-button"
+                class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-semibold space-x-2 text-white"
+            >
+                <i data-lucide="download" class="h-6 w-6"></i>
+                <span>Download Extension</span>
+            </button>
+            
+            <div class="mt-4">
+                <button
+                    id="donation-button"
+                    class="inline-flex items-center text-blue-400 hover:text-blue-300"
+                >
+                    <i data-lucide="heart" class="h-4 w-4 mr-1"></i>
+                    <span>Support with a donation</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-gray-800/50 p-8 rounded-xl">
+                <h2 class="text-2xl font-semibold mb-6">System Requirements</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="h-5 w-5 text-green-500"></i>
+                        <span>Chrome 88 or later</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="h-5 w-5 text-green-500"></i>
+                        <span>Windows 10/11, macOS 10.15+, or Linux</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="h-5 w-5 text-green-500"></i>
+                        <span>2GB RAM minimum</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="h-5 w-5 text-green-500"></i>
+                        <span>Active internet connection</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800/50 p-8 rounded-xl">
+                <h2 class="text-2xl font-semibold mb-6">Installation Guide</h2>
+                <ol class="space-y-4 list-decimal list-inside text-left text-gray-300">
+                    <li>Click the "Download Extension" button above</li>
+                    <li>Unzip the downloaded <code>extension.zip</code> file</li>
+                    <li>Open Chrome and go to <code>chrome://extensions</code></li>
+                    <li>Enable "Developer mode" from the top-right corner</li>
+                    <li>Click "Load unpacked" and select the unzipped folder</li>
+                    <li>Socio.io will now appear in your Chrome extensions</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h2 class="text-2xl font-semibold mb-6">Download Statistics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 p-6 rounded-xl stats-item">
+                    <div class="text-3xl font-bold text-blue-500 mb-2">100K+</div>
+                    <div class="text-gray-400">Active Users</div>
+                </div>
+                <div class="bg-gray-800/50 p-6 rounded-xl stats-item">
+                    <div class="text-3xl font-bold text-blue-500 mb-2">4.8/5</div>
+                    <div class="text-gray-400">User Rating</div>
+                </div>
+                <div class="bg-gray-800/50 p-6 rounded-xl stats-item">
+                    <div class="text-3xl font-bold text-blue-500 mb-2">1M+</div>
+                    <div class="text-gray-400">Downloads</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> donation}}

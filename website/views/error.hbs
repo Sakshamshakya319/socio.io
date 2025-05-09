@@ -1,0 +1,17 @@
+<div class="min-h-screen py-20 flex items-center justify-center">
+    <div class="max-w-xl mx-auto px-4 text-center">
+        <i data-lucide="alert-triangle" class="h-24 w-24 text-yellow-500 mx-auto mb-8"></i>
+        <h1 class="text-4xl font-bold mb-4">{{status}} - {{message}}</h1>
+        <p class="text-xl text-gray-400 mb-8">
+            {{#if error}}
+                {{error}}
+            {{else}}
+                Something went wrong. Please try again later.
+            {{/if}}
+        </p>
+        <a href="/" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-semibold transition-colors">
+            <i data-lucide="home" class="h-5 w-5 mr-2"></i>
+            Return to Home
+        </a>
+    </div>
+</div>
