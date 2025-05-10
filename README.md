@@ -1,5 +1,3 @@
-To make this content suitable as a **GitHub Release Tag Description**, you should keep it concise while highlighting key features and changes. Here's a clean and valid version of your text formatted for the **GitHub Release page**:
-
 ---
 
 ## 🚀 Socio.io Content Moderation Extension
